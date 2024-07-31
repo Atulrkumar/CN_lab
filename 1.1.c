@@ -1,27 +1,32 @@
 /*1. Write a C program to swap the content of 2 variables entered through the
 command line using function and pointer.*/
 #include <stdio.h>
+#include <stdlib.h>
 
-// Function to swap the contents of two variables
-void swap(int *a, int *b) {
+void swapValues(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-int main() {
-    int num1,num2;
-    printf("Enter 1st variable\n");
-    scanf("%d", &num1);
-    printf("Enter 2nd variable\n");
-    scanf("%d", &num2);
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        printf("Usage: %s <value1> <value2>\n", argv[0]);
+        return 1;
+    }
 
-    printf("Before swap: num1 = %d, num2 = %d\n", num1, num2);
+    int num1 = atoi(argv[1]);
+    int num2 = atoi(argv[2]);
 
-    // Swap the contents of num1 and num2
-    swap(&num1, &num2);
+    printf("Before swapping content :\n");
+    printf("num1 = %d\n", num1);
+    printf("num2 = %d\n", num2);
 
-    printf("After swap: num1 = %d, num2 = %d\n", num1, num2);
+    swapValues(&num1, &num2);
+
+    printf("After swapping content :\n");
+    printf("num1 = %d\n", num1);
+    printf("num2 = %d\n", num2);
 
     return 0;
 }
