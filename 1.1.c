@@ -1,3 +1,5 @@
+/*1. Write a C program to swap the content of 2 variables entered through the
+command line using function and pointer.*/
 #include <stdio.h>
 
 // Function to swap the contents of two variables
