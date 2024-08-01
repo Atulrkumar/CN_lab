@@ -1,5 +1,4 @@
-/*1. Write a C program to swap the content of 2 variables entered through the
-command line using function and pointer.
+/*
 2. Write a C program to assign values to each member of the following structure.
 Pass the populated structure to a function Using call-by-value and another
 function using call-by-address and print the value of each member of the
